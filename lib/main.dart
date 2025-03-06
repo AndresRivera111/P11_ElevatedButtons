@@ -36,7 +36,7 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          ElevatedButton(
+          ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color(0xffff0800),
               backgroundColor: Colors.yellow,
@@ -47,10 +47,11 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
               ),
             ),
             onPressed: () {},
-            child: const Text('Boton 1'),
+            icon: const Icon(Icons.star), // Icono para el Boton 1
+            label: const Text('Boton 1'),
           ),
           const SizedBox(height: 30),
-          ElevatedButton(
+          ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color(0xffffffff),
               backgroundColor: const Color(0xffff6924),
@@ -61,25 +62,26 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
               ),
             ),
             onPressed: () {},
-            child: const Text('Boton 2'),
+            icon: const Icon(Icons.favorite), // Icono para el Boton 2
+            label: const Text('Boton 2'),
           ),
           const SizedBox(height: 30),
-          ElevatedButton(
+          ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color(0xff008c0c),
               backgroundColor: const Color(0xffffffff),
               textStyle: const TextStyle(fontSize: 27),
               padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 18),
               shape: RoundedRectangleBorder(
-                side: const BorderSide(
-                    color: Colors.black, width: 3), // Borde negro grueso
+                side: const BorderSide(color: Colors.black, width: 3),
               ),
             ),
             onPressed: () {},
-            child: const Text('Boton 3'),
+            icon: const Icon(Icons.check), // Icono para el Boton 3
+            label: const Text('Boton 3'),
           ),
           const SizedBox(height: 50),
-          ElevatedButton(
+          ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color(0xffff87fa),
               textStyle: const TextStyle(fontSize: 28),
@@ -87,9 +89,11 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
               shape: const RoundedRectangleBorder(),
             ),
             onPressed: () {},
-            child: const Text('Boton 4'),
+            icon: const Icon(Icons.settings), // Icono para el Boton 4
+            label: const Text('Boton 4'),
           ),
           const SizedBox(height: 50),
+          // Resto del código...
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
